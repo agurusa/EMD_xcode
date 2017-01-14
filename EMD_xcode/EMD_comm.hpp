@@ -13,6 +13,7 @@
 #include <string>
 #include <sys/socket.h>
 #include <netinet/in.h> //needed for sockaddr struct
+#include <arpa/inet.h> //needed for inet_pton 
 
 
 
@@ -37,6 +38,7 @@ public:
     bool IsConnectionMade(); //TODO: make this an enum
     int AttemptConnection();
     void BindConnection();
+    void MakeRemoteConnection();
     // send out a request for a file
     void SendFileRequest();
     // receive the data from the file and save it locally
@@ -45,7 +47,7 @@ public:
     void Reset();
 private:
     //initialize in constructor function
-    std::string IPAddress;
+    const char *IPAddress;
     int PortNumber;
     int BufferSize;
     int sock; //ends up being the socket that is created

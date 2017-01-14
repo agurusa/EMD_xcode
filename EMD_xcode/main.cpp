@@ -16,7 +16,8 @@ EMD_comm communicator;
 int main(int argc, const char * argv[]) {
     communicator.AttemptConnection();
     if (communicator.IsConnectionMade()){
-      communicator.BindConnection();
+        communicator.BindConnection();
+        communicator.MakeRemoteConnection();
     };
     
     return 0;
