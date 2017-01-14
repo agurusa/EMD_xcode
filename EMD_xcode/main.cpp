@@ -18,6 +18,7 @@ int main(int argc, const char * argv[]) {
     if (communicator.IsConnectionMade()){
         communicator.BindConnection();
         communicator.MakeRemoteConnection();
+        communicator.SendFileRequest("ver");
     };
     
     return 0;

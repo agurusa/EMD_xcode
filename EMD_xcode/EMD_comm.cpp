@@ -63,6 +63,13 @@ void EMD_comm::MakeRemoteConnection(){
     }
 }
 
-void EMD_comm::SendFileRequest(){
+void EMD_comm::SendFileRequest(std::string message){
+    ssize_t sentBytes;
+    sentBytes = send(sock, &message, message.size(), 0); // not sure what this flag does...(terminates a recored, if supported by the protocol)
+    if (sentBytes < 0){
+        perror("send error. \n");
+    }
+    else
+        printf("%zu", sentBytes);
     
 }

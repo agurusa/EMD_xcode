@@ -34,13 +34,12 @@ public:
     //if it didn't
 				// tell that it didn't / why
     
-    
     bool IsConnectionMade(); //TODO: make this an enum
     int AttemptConnection();
     void BindConnection();
     void MakeRemoteConnection();
     // send out a request for a file
-    void SendFileRequest();
+    void SendFileRequest(std::string message);
     // receive the data from the file and save it locally
     // graph it
     
