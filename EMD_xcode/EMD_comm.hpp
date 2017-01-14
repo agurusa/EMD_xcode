@@ -40,6 +40,7 @@ public:
     void MakeRemoteConnection();
     // send out a request for a file
     void SendFileRequest(std::string message);
+    void ReceiveByes(); //non FTP
     // receive the data from the file and save it locally
     // graph it
     

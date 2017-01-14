@@ -12,6 +12,7 @@ EMD_comm::EMD_comm(){
     IPAddress = "73.15.175.187";
     sock = 1; //just chose a random integer here
     PortNumber = 23; //telnet port
+    BufferSize = 512;
 }
 
 int EMD_comm::AttemptConnection(){
@@ -70,6 +71,12 @@ void EMD_comm::SendFileRequest(std::string message){
         perror("send error. \n");
     }
     else
-        printf("%zu", sentBytes);
+        printf("%zu\n", sentBytes);
     
+}
+
+void EMD_comm::ReceiveByes(){
+    char buffer[BufferSize];
+        recv(sock, &buffer, BufferSize, 0);
+        printf("%s", buffer);
 }
