@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		87E250A41E297C9200F7092D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87E250A31E297C9200F7092D /* main.cpp */; };
+		87E250AD1E297CE200F7092D /* EMD_comm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87E250AB1E297CE200F7092D /* EMD_comm.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		87E250A01E297C9200F7092D /* EMD_xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EMD_xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E250A31E297C9200F7092D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		87E250AB1E297CE200F7092D /* EMD_comm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EMD_comm.cpp; sourceTree = "<group>"; };
+		87E250AC1E297CE200F7092D /* EMD_comm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EMD_comm.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				87E250A31E297C9200F7092D /* main.cpp */,
+				87E250AB1E297CE200F7092D /* EMD_comm.cpp */,
+				87E250AC1E297CE200F7092D /* EMD_comm.hpp */,
 			);
 			path = EMD_xcode;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87E250AD1E297CE200F7092D /* EMD_comm.cpp in Sources */,
 				87E250A41E297C9200F7092D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

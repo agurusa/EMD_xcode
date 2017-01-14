@@ -7,9 +7,17 @@
 //
 
 #include <iostream>
+#include "EMD_comm.hpp"
+
+//instantiate a new communicator
+
+EMD_comm communicator;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    communicator.AttemptConnection();
+    if (communicator.IsConnectionMade()){
+      communicator.BindConnection();
+    };
+    
     return 0;
 }
