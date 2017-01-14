@@ -9,6 +9,7 @@
 #include "EMD_comm.hpp"
 
 EMD_comm::EMD_comm(){
+    IPAddress = "73.15.175.187";
     sock = 1; //just chose a random integer here
     PortNumber = 23; //telnet port
 }
@@ -20,11 +21,11 @@ int EMD_comm::AttemptConnection(){
 
 bool EMD_comm::IsConnectionMade(){
     if (sock < 0){
-        perror("socket");
+        perror("socket\n");
         return false;
     }
     else {
-        printf("socket made");
+        printf("socket made\n");
         return sock != -1; //if the socket does not return -1, the connection has been made successfully.
     }
 }
@@ -39,10 +40,29 @@ void EMD_comm::BindConnection(){
     bindResult = bind(sock, (sockaddr *)&myaddr, sizeof(myaddr)); //not sure what the (sockaddr*)& symbol does
     //TODO: maybe combine this in IsConnectionMade()
     if (bindResult < 0){
-        perror("bind failed");
+        perror("bind failed\n");
     }
     else{
-        printf("bind successful");
+        printf("bind successful\n");
     }
+    
+}
+
+void EMD_comm::MakeRemoteConnection(){
+    int connectionResult;
+    struct sockaddr_in remoteaddr;
+    remoteaddr.sin_family = AF_INET; //TODO: make this globally available
+    inet_pton(AF_INET, IPAddress, &(remoteaddr.sin_addr));
+    remoteaddr.sin_port = htons(PortNumber);
+    connectionResult = connect(sock, (struct sockaddr *)&remoteaddr, sizeof(remoteaddr));
+    if (connectionResult< 0){
+        perror("remote connection failed \n");
+    }
+    else{
+        printf("remote connection successful.\n");
+    }
+}
+
+void EMD_comm::SendFileRequest(){
     
 }
