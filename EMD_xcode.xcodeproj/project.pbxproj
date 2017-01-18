@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61C4916C1E2EA72300F65244 /* FTP_comm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C4916A1E2EA72300F65244 /* FTP_comm.cpp */; };
+		61C491701E2EBA3300F65244 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C4916F1E2EBA3300F65244 /* libcurl.tbd */; };
 		87E250A41E297C9200F7092D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87E250A31E297C9200F7092D /* main.cpp */; };
 		87E250AD1E297CE200F7092D /* EMD_comm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87E250AB1E297CE200F7092D /* EMD_comm.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61C4916A1E2EA72300F65244 /* FTP_comm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FTP_comm.cpp; sourceTree = "<group>"; };
+		61C4916B1E2EA72300F65244 /* FTP_comm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FTP_comm.hpp; sourceTree = "<group>"; };
+		61C4916F1E2EBA3300F65244 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		87E250A01E297C9200F7092D /* EMD_xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EMD_xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E250A31E297C9200F7092D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		87E250AB1E297CE200F7092D /* EMD_comm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EMD_comm.cpp; sourceTree = "<group>"; };
@@ -35,17 +40,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C491701E2EBA3300F65244 /* libcurl.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61C4916E1E2EBA3300F65244 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61C4916F1E2EBA3300F65244 /* libcurl.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		87E250971E297C9200F7092D = {
 			isa = PBXGroup;
 			children = (
 				87E250A21E297C9200F7092D /* EMD_xcode */,
 				87E250A11E297C9200F7092D /* Products */,
+				61C4916E1E2EBA3300F65244 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +78,8 @@
 				87E250A31E297C9200F7092D /* main.cpp */,
 				87E250AB1E297CE200F7092D /* EMD_comm.cpp */,
 				87E250AC1E297CE200F7092D /* EMD_comm.hpp */,
+				61C4916A1E2EA72300F65244 /* FTP_comm.cpp */,
+				61C4916B1E2EA72300F65244 /* FTP_comm.hpp */,
 			);
 			path = EMD_xcode;
 			sourceTree = "<group>";
@@ -124,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C4916C1E2EA72300F65244 /* FTP_comm.cpp in Sources */,
 				87E250AD1E297CE200F7092D /* EMD_comm.cpp in Sources */,
 				87E250A41E297C9200F7092D /* main.cpp in Sources */,
 			);
@@ -252,6 +270,7 @@
 				87E250A91E297C9200F7092D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
