@@ -9,7 +9,10 @@
 #include "EMD_comm.hpp"
 
 EMD_comm::EMD_comm(){
-
+    IPAddress = "xx.xx.xxx.xxx";
+    sock = 1; //just chose a random integer here
+    PortNumber = 23; //telnet port
+    BufferSize = 512;
 }
 
 int EMD_comm::AttemptConnection(){
